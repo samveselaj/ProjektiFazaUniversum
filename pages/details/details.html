@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./details.css" />
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/brands.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/solid.css" />
+    <title>Details</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="position: fixed; top: 0; left: 0; min-width: 100vw; height: 60px; z-index: 10;">
+        <div
+            class="container-fluid d-flex justify-content-between d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center p-1">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+                <p class="text-light fs-3 my-0 py-0 px-3 pe-none text-nowrap">E-commerce</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse bg-dark px-2 py-lg-0 py-2 flex-column flex-lg-row align-items-stretch align-items-lg-center"
+                id="navbarSupportedContent">
+                <a href="/index.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                    Home <i class="fa-solid fa-home"></i>
+                </a>
+
+                <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-end justify-content-lg-end flex-grow-1"
+                    id="Right_side_unauthed">
+                    <a href="/pages/auth/login.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Login <i class="fa-solid fa-sign-in"></i>
+                    </a>
+                    <a href="/pages/auth/register.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Register <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                </div>
+
+                <div class="d-none flex-column flex-lg-row align-items-stretch align-items-lg-end justify-content-lg-end flex-grow-1"
+                    id="Right_side_authed">
+                    <a href="/pages/post/post.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap"
+                        id="Post_page_link">
+                        Post <i class="fa-brands fa-plus"></i>
+                    </a>
+                    <a href="/pages/profile/profile.html" id="Profile_page_link"
+                        class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Profile <i class="fa-solid fa-user"></i>
+                    </a>
+                    <button id="Logout_button" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Logout <i class="fa-solid fa-sign-out"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 80px;">
+        <h1 class="text-center mb-3" id="Product_title"></h1>
+        <div class="row">
+            <div class="product-img-container col-md-6 p-0">
+                <img src="" alt="img" id="Product_thumbnail" class="product-img">
+            </div>
+            <div class="col-md-6 text-start">
+                <p id="Product_date"></p>
+                <p id="Product_description"></p>
+                <p id="Product_price"></p>
+                <div class="d-none align-items-center justify-content-start" id="EditDeleteDiv">
+                    <a href="#" id="Edit_link" class="text-decoration-none">
+                        <button class="btn btn-outline-dark btn-sm mx-1"><i class="fa-solid fa-pencil"></i>
+                            edit</button>
+                    </a>
+                    <button class="btn btn-outline-danger btn-sm mx-1" id="Delete_button"><i
+                            class="fa-solid fa-pencil"></i> delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="./details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./authStyle.css">
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/brands.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/solid.css" />
+    <title>Register</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="position: fixed; top: 0; left: 0; min-width: 100vw; height: 60px; z-index: 10;">
+        <div class="container-fluid d-flex align-items-center justify-content-between p-1">
+            <div class="d-flex align-items-center justify-content-center">
+                <p class="text-light fs-3 my-0 py-0 px-3 pe-none">E-commerce</p>
+                <a href="/index.html" class="btn btn-outline-light mx-1">
+                    Home <i class="fa-solid fa-home"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center justify-content-center" id="Right_side_unauthed">
+                <a href="/pages/auth/login.html" class="btn btn-outline-light mx-1">
+                    Login <i class="fa-solid fa-sign-in"></i>
+                </a>
+                <a href="/pages/auth/register.html" class="btn btn-outline-light mx-1">
+                    Register <i class="fa-solid fa-user-plus"></i>
+                </a>
+            </div>
+            <div class="d-none" id="Right_side_authed">
+                <a href="/pages/post/post.html" class="btn btn-outline-light mx-1">
+                    Post <i class="fa-brands fa-plus"></i>
+                </a>
+                <a href="/pages/profile/profile.html" class="btn btn-outline-light mx-1">
+                    Profile <i class="fa-solid fa-user"></i>
+                </a>
+                <button id="Logout_button" class="btn btn-outline-light mx-1">
+                    Logout <i class="fa-solid fa-sign-out"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container d-flex align-items-center justify-content-center" style="padding: 120px 0px;">
+        <form class="auth-form bg-dark" id="Register_form">
+            <h1 class="my-3 text-light">Register</h1>
+            <div class="form-outline mb-4">
+                <input type="text" id="Name_input" name="name_input" class="form-control" placeholder="John Smith" />
+                <label class="form-label text-light" for="Name_input">Name</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="text" id="Username_input" name="username_input" class="form-control" placeholder="johnsmith" />
+                <label class="form-label text-light" for="Username_input">Username</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="email" id="Email_input" name="email_input" class="form-control" placeholder="johnsmith@email.com" />
+                <label class="form-label text-light" for="Email_input">Email address</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="password" id="Password_input" name="password_input" class="form-control" placeholder="password" />
+                <label class="form-label text-light" for="Password_input">Password</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="password" id="Confirm_password_input" name="confirm_password_input" class="form-control" placeholder="password" />
+                <label class="form-label text-light" for="Confirm_password_input">Confirm Password</label>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center border border-1 border-light rounded py-2">
+                <div class="d-flex align-items-center justify-content-center pe-3">
+                    <input type="radio" name="role" id="Role_input" value="admin" class="p-0 m-0" />
+                    <p class="ps-2 py-0 m-0 text-light">admin</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center pe-3">
+                    <input type="radio" name="role" id="Role_input" value="user" class="p-0 m-0" />
+                    <p class="ps-2 py-0 m-0 text-light">user</p>
+                </div>
+            </div>
+            <p class="p-0 mb-4 text-light">User Role</p>
+
+            <button type="submit" class="btn btn-danger btn-block mb-4 w-100">Sign up</button>
+
+            <div class="text-center">
+                <p class="text-light">Have an account? <a href="./login.html" class="text-danger">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="./registerScript.js"></script>
+</body>
+
+</html>

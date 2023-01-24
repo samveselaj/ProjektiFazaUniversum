@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/brands.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/solid.css" />
+    <title>Profile</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="position: fixed; top: 0; left: 0; min-width: 100vw; height: 60px; z-index: 10;">
+        <div
+            class="container-fluid d-flex justify-content-between d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center p-1">
+            <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+                <p class="text-light fs-3 my-0 py-0 px-3 pe-none text-nowrap">E-commerce</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse bg-dark px-2 py-lg-0 py-2 flex-column flex-lg-row align-items-stretch align-items-lg-center"
+                id="navbarSupportedContent">
+                <a href="/index.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                    Home <i class="fa-solid fa-home"></i>
+                </a>
+
+                <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-end justify-content-lg-end flex-grow-1"
+                    id="Right_side_unauthed">
+                    <a href="/pages/auth/login.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Login <i class="fa-solid fa-sign-in"></i>
+                    </a>
+                    <a href="/pages/auth/register.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Register <i class="fa-solid fa-user-plus"></i>
+                    </a>
+                </div>
+
+                <div class="d-none flex-column flex-lg-row align-items-stretch align-items-lg-end justify-content-lg-end flex-grow-1"
+                    id="Right_side_authed">
+                    <a href="/pages/post/post.html" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap" id="Post_page_link">
+                        Post <i class="fa-brands fa-plus"></i>
+                    </a>
+                    <a href="/pages/profile/profile.html" id="Profile_page_link"
+                        class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Profile <i class="fa-solid fa-user"></i>
+                    </a>
+                    <button id="Logout_button" class="btn btn-outline-light mx-1 mt-2 mt-lg-0 text-nowrap">
+                        Logout <i class="fa-solid fa-sign-out"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container d-flex align-items-center justify-content-center" style="padding: 80px 0px;">
+        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+            <h1 class="mb-4">User Details</h1>
+            <p class="profile-info-text" id="Name">name: John Smith</p>
+            <p class="profile-info-text" id="Username">username: johnsmith</p>
+            <p class="profile-info-text" id="Email">email: johnsmith@email.com</p>
+            <p class="profile-info-text" id="Role">role: user</p>
+            <p class="profile-info-text" id="Date">joined date: 2023/01/08</p>
+
+            <form class="auth-form bg-dark d-none mb-4" id="Edit_user_form">
+                <h1 class="my-3 text-light">Edit</h1>
+                <div class="form-outline mb-4">
+                    <input type="text" id="Name_input" name="name_input" class="form-control"
+                        placeholder="John Smith" />
+                    <label class="form-label text-light" for="Name_input">Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="email" id="Email_input" name="email_input" class="form-control"
+                        placeholder="johnsmith@email.com" />
+                    <label class="form-label text-light" for="Email_input">Email address</label>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center border border-1 border-light rounded py-2">
+                    <div class="d-flex align-items-center justify-content-center pe-3">
+                        <input type="radio" name="role" id="Role_input" value="admin" class="p-0 m-0" />
+                        <p class="ps-2 py-0 m-0 text-light">admin</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center pe-3">
+                        <input type="radio" name="role" id="Role_input" value="user" class="p-0 m-0" />
+                        <p class="ps-2 py-0 m-0 text-light">user</p>
+                    </div>
+                </div>
+                <p class="p-0 mb-4 text-light">User Role</p>
+                <button id="Change_password_btn" class="btn btn-outline-light btn-sm mb-4" type="button">change
+                    password</button>
+
+                <div id="Password_container" class="d-none">
+                    <div class="form-outline mb-4">
+                        <input type="password" id="Old_password_input" name="old_password_input" class="form-control"
+                            placeholder="password" />
+                        <label class="form-label text-light" for="Old_password_input">Old Password</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="password" id="New_password_input" name="new_password_input" class="form-control"
+                            placeholder="password" />
+                        <label class="form-label text-light" for="New_password_input">New Password</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="password" id="Confirm_new_password_input" name="confirm_new_password_input"
+                            class="form-control" placeholder="password" />
+                        <label class="form-label text-light" for="Confirm_new_password_input">Confirm New
+                            Password</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-primary btn-block mb-4 w-100">Confirm</button>
+            </form>
+
+            <button class="btn btn-outline-primary btn-small" id="Edit_btn">edit</button>
+        </div>
+        <!-- <form class="auth-form bg-dark" id="Register_form">
+            <h1 class="my-3 text-light">Register</h1>
+            <div class="form-outline mb-4">
+                <input type="text" id="Name_input" name="name_input" class="form-control" placeholder="John Smith" />
+                <label class="form-label text-light" for="Name_input">Name</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="text" id="Username_input" name="username_input" class="form-control" placeholder="johnsmith" />
+                <label class="form-label text-light" for="Username_input">Username</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="email" id="Email_input" name="email_input" class="form-control" placeholder="johnsmith@email.com" />
+                <label class="form-label text-light" for="Email_input">Email address</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="password" id="Password_input" name="password_input" class="form-control" placeholder="password" />
+                <label class="form-label text-light" for="Password_input">Password</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="password" id="Confirm_password_input" name="confirm_password_input" class="form-control" placeholder="password" />
+                <label class="form-label text-light" for="Confirm_password_input">Confirm Password</label>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center border border-1 border-light rounded py-2">
+                <div class="d-flex align-items-center justify-content-center pe-3">
+                    <input type="radio" name="role" id="Role_input" value="admin" class="p-0 m-0" />
+                    <p class="ps-2 py-0 m-0 text-light">admin</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center pe-3">
+                    <input type="radio" name="role" id="Role_input" value="user" class="p-0 m-0" />
+                    <p class="ps-2 py-0 m-0 text-light">user</p>
+                </div>
+            </div>
+            <p class="p-0 mb-4 text-light">User Role</p>
+
+            <button type="submit" class="btn btn-danger btn-block mb-4 w-100">Sign up</button>
+
+            <div class="text-center">
+                <p class="text-light">Have an account? <a href="./login.html" class="text-danger">Login</a></p>
+            </div>
+        </form> -->
+    </div>
+    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.min.js" defer></script>
+    <script src="./profile.js"></script>
+</body>
+
+</html>

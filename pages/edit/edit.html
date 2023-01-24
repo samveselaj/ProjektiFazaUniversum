@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./edit.css">
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/brands.css" />
+    <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/solid.css" />
+    <title>Post</title>
+</head>
+
+<body>
+    <form class="auth-form bg-dark mt-5" id="Edit_form">
+        <a class="text-primary text-start text-decoration-none" href="/index.html">&lt; Home page</a>
+        <h1 class="my-3 text-light">Edit product</h1>
+        <div class="form-outline mb-4">
+            <input type="file" id="image" name="product_file_input" accept="image/*" class="form-control" />
+            <label class="form-label text-light" for="name">upload file</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="Name" name="product_name_input" placeholder="John Smith" class="form-control" />
+            <label class="form-label text-light" for="name">Product Name</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <textarea type="text" id="Description" name="product_desription_input"
+                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit." class="form-control"
+                rows="4"></textarea>
+            <label class="form-label text-light" for="Description">Description</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="Price" name="product_price_input" placeholder="0.00€" class="form-control" min="0" />
+            <label class="form-label text-light" for="Price">Price</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mb-4 w-100">Edit</button>
+    </form>
+    <script src="./edit.js"></script>
+</body>
+
+</html>
